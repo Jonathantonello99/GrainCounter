@@ -51,14 +51,14 @@ class CounterEngine:
         self.last_count = 0
 
     def calibrate(self, frame):
-        \"\"\"Estimate sensible segmentation parameters from a clean frame.
+        """Estimate sensible segmentation parameters from a clean frame.
 
         The user should place several representative objects on the surface.
         The method estimates background color from the border and chooses a
         threshold from color-distance statistics, then derives an area range
         from connected components. It is intentionally conservative: the user
         can still fine-tune the values afterwards.
-        \"\"\"
+        """
         img = cv2.GaussianBlur(frame, (5, 5), 0)
         border = np.concatenate([
             img[0:20].reshape(-1, 3), img[-20:].reshape(-1, 3),
