@@ -24,6 +24,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Validate Python source
+        run: |
+          python -m py_compile grain_counter/app.py
+
       - name: Build executable
         run: |
           pyinstaller --noconfirm --clean --onefile --windowed --name GrainCounter grain_counter/app.py
