@@ -1,0 +1,24 @@
+1. Entre no GitHub e crie um repositório novo, por exemplo:
+   GrainCounter
+
+2. Não precisa criar README, .gitignore ou licença pelo site.
+
+3. Extraia este ZIP.
+
+4. Envie os arquivos para o repositório mantendo a pasta:
+   .github/workflows/build-windows.yml
+
+5. Abra a aba Actions.
+
+6. Execute "Build Windows EXE".
+
+7. Ao terminar, abra o workflow e baixe:
+   GrainCounter-Windows
+
+8. O ZIP baixado contém GrainCounter.exe. Extraia e execute no Windows.
+
+Para criar uma Release:
+- crie uma tag no GitHub, por exemplo v1.0.0;
+- o workflow compilará o EXE e anexará o arquivo à Release.
+
+Observação: o computador onde o GrainCounter.exe será usado não precisa ter Python.
